@@ -87,14 +87,14 @@ function Pizzas() {
   );
 }
 
-function Pizza({ pizza }) {
+function Pizza({ soldOut, photoName, name, ingredients, price }) {
   return (
-    <li className={`pizza ${pizza.soldOut && "sold-out"}`}>
-      <img src={pizza.photoName} alt={pizza.name} />
+    <li className={`pizza ${soldOut && "sold-out"}`}>
+      <img src={photoName} alt={name} />
       <div>
-        <h2>{pizza.name}</h2>
-        <p>{pizza.ingredients}</p>
-        <span>{pizza.price}</span>
+        <h2>{name}</h2>
+        <p>{ingredients}</p>
+        <span>{price}</span>
       </div>
     </li>
   );
