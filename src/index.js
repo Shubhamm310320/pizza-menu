@@ -106,8 +106,22 @@ function Footer() {
   const closeHour = 21;
   const isOpen = hour >= openHour && hour <= closeHour;
 
-  if (isOpen) console.log("We'r currently open!");
-  else console.log("Sorry We're closed");
+  // if (!isOpen)
+  //   return (
+  //     <p>
+  //       We're currently closed. Please visit between {openHour}:00 - {closeHour}
+  //       :00
+  //     </p>
+  //   );
+
+  // return (
+  //   <footer className="footer">
+  //     <div className="order">
+  //       <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+  //       <button className="btn">Order</button>
+  //     </div>
+  //   </footer>
+  // );
 
   return (
     <footer className="footer">
