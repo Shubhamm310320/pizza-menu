@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+// import App from "./Challenges/1/challenge1";
 
 const pizzaData = [
   {
@@ -69,9 +70,12 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <div className="pizzas">
+        <Pizza pizza={pizzaData[0]} />
+        <Pizza pizza={pizzaData[1]} />
+        <Pizza pizza={pizzaData[2]} />
+        <Pizza pizza={pizzaData[3]} />
+      </div>
     </main>
   );
 }
@@ -92,12 +96,15 @@ function Footer() {
   );
 }
 
-function Pizza() {
+function Pizza({ pizza }) {
   return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinacci" />
-      <h2>Pizza Spinacci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+    <div className="pizza">
+      <img src={pizza.photoName} alt={pizza.name} />
+      <div>
+        <h2>{pizza.name}</h2>
+        <p>{pizza.ingredients}</p>
+        <span>{pizza.price + 3}</span>
+      </div>
     </div>
   );
 }
