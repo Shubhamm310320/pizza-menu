@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from "./Challenges/1/challenge1";
+import App from "./Challenges/1/challenge1";
 
+/*
 const pizzaData = [
   {
     name: "Focaccia",
@@ -151,6 +152,7 @@ function Order({ closeHour }) {
     </div>
   );
 }
+*/
 
 // React@18
 const root = ReactDOM.createRoot(document.getElementById("root"));
