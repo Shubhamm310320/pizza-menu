@@ -102,7 +102,7 @@ function Pizza({ soldOut, photoName, name, ingredients, price }) {
       <div>
         <h2>{name}</h2>
         <p>{ingredients}</p>
-        <span>{price}</span>
+        <span>{soldOut ? "SOLD OUT" : price}</span>
       </div>
     </li>
   );
