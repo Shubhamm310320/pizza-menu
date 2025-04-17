@@ -76,14 +76,14 @@ function Menu() {
 }
 
 function Pizzas() {
-  return (
-    pizzaData.length > 0 && (
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizza={pizza} key={pizza.name} />
-        ))}
-      </ul>
-    )
+  return pizzaData.length > 0 ? (
+    <ul className="pizzas">
+      {pizzaData.map((pizza) => (
+        <Pizza pizza={pizza} key={pizza.name} />
+      ))}
+    </ul>
+  ) : (
+    <p>We're still working on our menu. Please come back later!😉</p>
   );
 }
 
@@ -111,13 +111,12 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {isOpen && (
+      {isOpen ? (
         <div className="order">
           <p>We're open until {closeHour}:00. Come visit us or order online.</p>
           <button className="btn">Order</button>
         </div>
-      )}
-      {!isOpen && (
+      ) : (
         <p>
           We're currently closed. Please visit between {openHour}:00 -{" "}
           {closeHour}
